@@ -1,4 +1,4 @@
-package chapter1.level2;
+package chapter1.level3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,6 +13,10 @@ public class TicketOffice {
         this.tickets = Arrays.asList(tickets);
     }
 
+    //도메인 로직
+    public void sellTicketTo(Audience audience){
+        plusAmount(audience.buy(getTicket()));
+    }
 
     public Ticket getTicket(){
         return tickets.remove(0);

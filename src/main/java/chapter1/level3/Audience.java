@@ -1,4 +1,4 @@
-package chapter1.level2;
+package chapter1.level3;
 
 public class Audience {
     private Bag bag;
@@ -8,13 +8,6 @@ public class Audience {
     }
 
     public Long buy(Ticket ticket){
-        if(bag.hasInvitation()){
-            bag.setTicket(ticket);
-            return 0L;
-        }else{
-            bag.setTicket(ticket);
-            bag.minusMoney(ticket.getFee());
-            return ticket.getFee();
-        }
+        return bag.hold(ticket);
     }
 }

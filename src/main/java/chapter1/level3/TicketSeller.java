@@ -1,4 +1,4 @@
-package chapter1.level2;
+package chapter1.level3;
 
 public class TicketSeller {
     TicketOffice ticketOffice;
@@ -9,7 +9,7 @@ public class TicketSeller {
 
 
     public void sellTo(Audience audience){
-        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
+        ticketOffice.sellTicketTo(audience);
         }
 
 }

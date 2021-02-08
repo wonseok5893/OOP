@@ -1,4 +1,4 @@
-package chapter1.level2;
+package chapter1.level3;
 
 public class Bag {
     private Long money;
@@ -12,6 +12,22 @@ public class Bag {
     public Bag(Invitation invitation) {
         this.invitation = invitation;
     }
+
+    // 도메인 로직
+    public Long hold(Ticket ticket){
+        if(hasInvitation()){
+            setTicket(ticket);
+            return 0L;
+        }else{
+            minusMoney(ticket.getFee());
+            setTicket(ticket);
+            return ticket.getFee();
+        }
+    }
+
+
+
+
 
     public boolean hasInvitation(){
         return invitation!=null;

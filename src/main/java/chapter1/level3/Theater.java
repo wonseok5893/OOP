@@ -1,4 +1,4 @@
-package chapter1.level2;
+package chapter1.level3;
 
 public class Theater {
     private TicketSeller ticketSeller;
